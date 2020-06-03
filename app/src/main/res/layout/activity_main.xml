@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bAuth"
+        android:layout_width="225dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="launchNewActivity"
+        android:text="@string/boton_sesion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/bCarta"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:onClick="launchNewActivity"
+        android:text="@string/boton_carta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bRestaurante"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="launchNewActivity"
+        android:text="@string/boton_localizar"
+        app:layout_constraintEnd_toEndOf="@+id/bCarta"
+        app:layout_constraintStart_toStartOf="@+id/bCarta"
+        app:layout_constraintTop_toBottomOf="@+id/bCarta" />
+
+    <Button
+        android:id="@+id/bReserva"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="launchNewActivity"
+        android:text="@string/boton_reserva"
+        app:layout_constraintEnd_toEndOf="@+id/bRestaurante"
+        app:layout_constraintStart_toStartOf="@+id/bRestaurante"
+        app:layout_constraintTop_toBottomOf="@+id/bRestaurante" />
+
+    <Button
+        android:id="@+id/bDescuentos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:onClick="launchNewActivity"
+        android:text="@string/boton_descuentos"
+        app:layout_constraintEnd_toEndOf="@+id/bReserva"
+        app:layout_constraintStart_toStartOf="@+id/bReserva"
+        app:layout_constraintTop_toBottomOf="@+id/bReserva" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="196dp"
+        android:layout_height="170dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/bCarta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/gallery_thumb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

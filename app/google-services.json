@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "877355777766",
+    "firebase_url": "https://bambinos-c3c6b.firebaseio.com",
+    "project_id": "bambinos-c3c6b",
+    "storage_bucket": "bambinos-c3c6b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877355777766:android:233ff5df65eefe20c58527",
+        "android_client_info": {
+          "package_name": "com.example.bambino"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877355777766-dnfah2t3vfr05fbashlp084eiemluksm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8Z9xBF57k3rbxIxICaZLltGek_-rV7mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877355777766-dnfah2t3vfr05fbashlp084eiemluksm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877355777766:android:78e78fe0b9974ccfc58527",
+        "android_client_info": {
+          "package_name": "com.example.bambinos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "877355777766-dnfah2t3vfr05fbashlp084eiemluksm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8Z9xBF57k3rbxIxICaZLltGek_-rV7mo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "877355777766-dnfah2t3vfr05fbashlp084eiemluksm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Bambino\'s</string>
+    //Texto de botones
+    <string name="boton_carta">Nuestra carta</string>
+    <string name="boton_localizar">Localiza el restaurante más cercano</string>
+    <string name="boton_reserva">Realizar reserva</string>
+    <string name="boton_descuentos">Descuentos</string>
+    <string name="boton_sesion">Iniciar sesión/Registrarse</string>
+    <string name="boton_registrar">Registrarse</string>
+    <string name="boton_acceder">Acceder</string>
+    <string name="boton_olvidadoContraseña">He olvidado mi contraseña</string>
+    <string name="boton_google">Continúa con Google</string>
+
+    //Titulo de pantallas
+    <string name="tit_carta">Nuestra carta</string>
+    <string name="tit_restaurante">Restaurantes cercanos</string>
+    <string name="tit_descuentos">Descuentos</string>
+    //Hints
+    <string name="hint_Email">Email</string>
+    <string name="hint_Contraseña">Contraseña</string>
+
+</resources>
