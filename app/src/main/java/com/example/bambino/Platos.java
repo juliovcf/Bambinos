@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -26,9 +27,9 @@ public class Platos extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_platos);
-        databaseReference = FirebaseDatabase.getInstance().getReference("Pizzas");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Pizzas");
         listView = (ListView) findViewById(R.id.lPlatos);
-        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1);
+        arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, arrayList);
         listView.setAdapter(arrayAdapter);
 
     }
