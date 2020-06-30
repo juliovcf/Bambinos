@@ -63,17 +63,6 @@
         app:layout_constraintStart_toStartOf="@+id/bReserva"
         app:layout_constraintTop_toBottomOf="@+id/bReserva" />
 
-    <Button
-        android:id="@+id/bDescuentos"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:onClick="launchNewActivity"
-        android:text="@string/boton_descuentos"
-        app:layout_constraintEnd_toEndOf="@+id/bCarta"
-        app:layout_constraintStart_toStartOf="@+id/bCarta"
-        app:layout_constraintTop_toBottomOf="@+id/bCarta" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="196dp"

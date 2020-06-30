@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("message", "Reserva");
                 startActivity(intent);
                 break;
-            case R.id.bDescuentos:
-                // Explicit Intent to launch the ForResultActivity
-                intent = new Intent(MainActivity.this, Descuentos.class);
-                startActivity(intent);
-                break;
             case R.id.bAuth:
                 // Explicit Intent to launch the ExplicitIntentActivity
                 intent = new Intent(MainActivity.this, Authentication.class);

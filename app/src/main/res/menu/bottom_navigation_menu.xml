@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/icInicio"
+        android:icon="@mipmap/ic_home"
+        android:title="@string/text_inicio"/>
+    <item
+        android:id="@+id/icCarta"
+        android:icon="@mipmap/ic_carta"
+        android:title="@string/text_carta"/>
+
+    <item
+        android:id="@+id/icReserva"
+        android:enabled="true"
+        android:icon="@mipmap/ic_reserva"
+        android:title="@string/text_reserva"/>
+
+    <item
+        android:id="@+id/icRestaurante"
+        android:enabled="true"
+        android:icon="@mipmap/ic_location"
+        android:title="@string/text_restaurantes"/>
+
+    <item
+        android:id="@+id/icUsuario"
+        android:enabled="true"
+        android:icon="@mipmap/ic_user"
+        android:title="@string/text_usuario"/>
+
+</menu>

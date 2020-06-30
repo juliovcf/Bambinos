@@ -7,14 +7,17 @@
     <string name="boton_descuentos">Descuentos</string>
     <string name="boton_sesion">Iniciar sesión/Registrarse</string>
     <string name="boton_registrar">Registrarse</string>
-    <string name="boton_acceder">Acceder</string>
+    <string name="boton_acceder">Iniciar Sesión</string>
     <string name="boton_olvidadoContraseña">He olvidado mi contraseña</string>
     <string name="boton_google">Continúa con Google</string>
+    <string name="boton_facebook">Continúa con Facebook</string>
     <string name="boton_rMadrid"><strong>Bambino\'s Madrid:</strong> La Castellana 212</string>
     <string name="boton_rValencia"><strong>Bambino\'s Valencia:</strong> Avenida Blasco Ibañez 121</string>
     <string name="boton_rBarcelona"><strong>Bambino\'s Barcelona:</strong> Plaza España 21</string>
     <string name="boton_rSevilla"><strong>Bambino\'s Sevilla:</strong> Plaza San Franciso 12</string>
     <string name="boton_rCastellon"><strong>Bambino\'s Castellón:</strong> CC La Salera</string>
+    <string name="boton_editar">Editar Información</string>
+    <string name="boton_historial">Historial de pedidos</string>
 
     //Titulo de pantallas
     <string name="tit_carta">Nuestra carta</string>
@@ -23,9 +26,29 @@
     //Hints
     <string name="hint_Email">Email</string>
     <string name="hint_Contraseña">Contraseña</string>
+    <string name="hint_Nombre">Nombre</string>
+    <string name="hint_Apellido">Apellidos</string>
+
+
     <string name="title_activity_localiza">Map</string>
 
     //Texto
     <string name="selecciona_restaurante">Seleccione el restaurante donde desee realizar la reserva</string>
+    <string name="title_activity_registrarse">Registrarse</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    //Menu
+    <string name="text_inicio">"Inicio"</string>
+    <string name="text_carta">"Carta"</string>
+    <string name="text_reserva">"Reserva"</string>
+    <string name="text_restaurantes">"Restaurantes"</string>
+    <string name="text_usuario">"Usuario"</string>
 
 </resources>

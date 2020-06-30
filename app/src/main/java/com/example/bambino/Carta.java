@@ -10,11 +10,15 @@ import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.bottomnavigation.BottomNavigationItemView;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import java.util.ArrayList;
 
 public class Carta extends AppCompatActivity {
 
     ListView listView;
+    BottomNavigationItemView item;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,4 +52,10 @@ public class Carta extends AppCompatActivity {
             }
         });
     }
+
+    /*BottomNavigationView.OnNavigationItemSelectedListener{
+        item -> when(item.){
+            R.id.bottom_navigation
+        }
+    }*/
 }

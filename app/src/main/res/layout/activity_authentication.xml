@@ -47,8 +47,13 @@
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:text="@string/boton_olvidadoContraseña"
-            android:textColor="@color/colorPrimary" />
+            android:textColor="@color/colorPrimary"
+            />
 
+        <View
+            android:layout_width="165dp"
+            android:layout_height="1dp"
+            android:background="@color/colorPrimary" />
         <Space
             android:layout_width="match_parent"
             android:layout_height="8dp" />
@@ -123,7 +128,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="#3333FF"
-        android:text="@string/boton_google"
+        android:text="@string/boton_facebook"
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

@@ -1,5 +1,6 @@
 package com.example.bambino;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
@@ -9,11 +10,13 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Localiza extends FragmentActivity implements OnMapReadyCallback {
+public class Localiza extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
+    private Marker marker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,19 +54,31 @@ public class Localiza extends FragmentActivity implements OnMapReadyCallback {
 
         // Add a marker in Valencia and move the camera
         LatLng valencia = new LatLng(39.4697500, -0.3773900);
-        mMap.addMarker(new MarkerOptions().position(valencia).title("Bambinos Valencia").snippet("Blasco Ibañez 121"));
+        //mMap.addMarker(new MarkerOptions().position(valencia).title("Bambinos Valencia").snippet("Blasco Ibañez 121"));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(valencia));
 
         LatLng madrid = new LatLng(40.4165000, -3.7025600);
-        mMap.addMarker(new MarkerOptions().position(madrid).title("Bambinos Madrid").snippet("La Castellana 212"));
+        mMap.addMarker(new MarkerOptions().position(madrid).title("Bambinos Madrid").snippet("La Castellana 212 \n Tlf: 9876543"));
 
         LatLng barcelona = new LatLng(41.3818, 2.1685);
         mMap.addMarker(new MarkerOptions().position(barcelona).title("Bambinos Barcelona").snippet("Plaza España 21"));
 
         LatLng sevilla = new LatLng(37.3914105, -5.9591776);
-        mMap.addMarker(new MarkerOptions().position(sevilla).title("Bambinos Sevilla").snippet("Plaza San Franciso"));
+        mMap.addMarker(new MarkerOptions().position(sevilla).title("Bambinos Sevilla").snippet("Plaza San Franciso 2"));
 
+        marker = googleMap.addMarker(new MarkerOptions().position(valencia).title("Bambinos Valencia").snippet("Blasco Ibañez 121"));
 
+        googleMap.setOnMarkerClickListener(this);
+    }
 
+    @Override
+    public boolean onMarkerClick(Marker marker) {
+        Intent intent;
+        if(marker.equals(marker)){
+            intent = new Intent(Localiza.this, Carta.class);
+            intent.putExtra("message", "Valencia");
+            startActivity(intent);
+        }
+        return false;
     }
 }
