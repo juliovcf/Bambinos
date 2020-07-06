@@ -13,7 +13,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class Localiza extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
+public class Localiza extends FragmentActivity implements GoogleMap.OnInfoWindowClickListener, OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     private GoogleMap mMap;
     private Marker marker;
@@ -69,16 +69,22 @@ public class Localiza extends FragmentActivity implements OnMapReadyCallback, Go
         marker = googleMap.addMarker(new MarkerOptions().position(valencia).title("Bambinos Valencia").snippet("Blasco Ibañez 121"));
 
         googleMap.setOnMarkerClickListener(this);
+        googleMap.setOnInfoWindowClickListener(this);
     }
 
     @Override
     public boolean onMarkerClick(Marker marker) {
         Intent intent;
         if(marker.equals(marker)){
-            intent = new Intent(Localiza.this, Carta.class);
+           /*intent = new Intent(Localiza.this, Carta.class);
             intent.putExtra("message", "Valencia");
-            startActivity(intent);
+            startActivity(intent);*/
         }
         return false;
+    }
+
+    @Override
+    public void onInfoWindowClick(Marker marker) {
+
     }
 }

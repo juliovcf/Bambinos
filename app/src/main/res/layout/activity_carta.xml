@@ -21,9 +21,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_gravity="bottom"
-        android:background="@color/colorBotonClarito"
-        app:itemBackground="#ffffff"
-        app:itemTextColor="@color/colorPrimary"
+        android:background="@color/colorBlanco"
+        app:itemTextColor="@color/colorNegro"
+        app:itemRippleColor="@color/colorBlanco"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_navigation_menu" />
 
 </RelativeLayout>

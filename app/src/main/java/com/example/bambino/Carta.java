@@ -45,7 +45,7 @@ public class Carta extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent;
                 // Explicit Intent to launch the ExplicitIntentActivity
-                intent = new Intent(Carta.this, Platos.class);
+                intent = new Intent(Carta.this, Detalles.class);
                 // Include the value of a String called "message" as parameter
                 intent.putExtra("message", position);
                 startActivity(intent);

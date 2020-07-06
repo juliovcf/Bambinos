@@ -25,6 +25,7 @@ public class Platos extends AppCompatActivity {
     private RecyclerView pList;
     private PlatosApadter platosApadter;
     private List<Plato> lPlatos;
+    private String coleccion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,12 +35,12 @@ public class Platos extends AppCompatActivity {
         lPlatos = new ArrayList<>();
         platosApadter = new PlatosApadter(lPlatos);
 
+
         pList = (RecyclerView) findViewById(R.id.pList);
         pList.setHasFixedSize(true);
         pList.setLayoutManager(new LinearLayoutManager(this));
         pList.setAdapter(platosApadter);
-        //databaseReference = FirebaseDatabase.getInstance().getReference().child("Pizzas");
-        FirebaseFirestore.getInstance().collection("Pizzas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        FirebaseFirestore.getInstance().collection(coleccion).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
@@ -48,14 +49,11 @@ public class Platos extends AppCompatActivity {
                         Plato plato = document.toObject(Plato.class);
                         lPlatos.add(plato);
                         platosApadter.notifyDataSetChanged();
-                        Log.d("Pizzas", document.getId() + " => " + document.getData());
                     }
                     pList = findViewById(R.id.pList);
-
-                    //arrayAdapter = new ArrayAdapter<String>(this, lPlatos);
                     pList.setAdapter(platosApadter);
                 } else {
-                    Log.w("Pizzas", "Error getting documents.", task.getException());
+                    Log.w("Error", "Error getting documents.", task.getException());
                 }
             }
         });
@@ -63,3 +61,6 @@ public class Platos extends AppCompatActivity {
 
     }
 }
+
+
+//Log.d("Pizzas", document.getId() + " => " + document.getData());

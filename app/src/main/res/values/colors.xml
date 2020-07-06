@@ -5,4 +5,8 @@
     <color name="colorBoton">#FF3333</color>
     <color name="colorBotonClarito">#FFCCCC</color>
     <color name="colorBackground">#ECEFF1</color>
+    <color name="colorBackgroundMenu">#4D4D4D</color>
+    <color name="colorBlanco">#FFFFFF</color>
+    <color name="colorNegro">#000000</color>
+
     </resources>
