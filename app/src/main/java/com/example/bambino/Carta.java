@@ -11,7 +11,6 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 
@@ -24,8 +23,10 @@ public class Carta extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carta);
+        String titulo = "Carta";
+        setTitle(titulo);
 
-        listView = (ListView) findViewById(R.id.lCarta);
+        listView = (ListView) findViewById(R.id.lPlatos);
         ArrayList<String> arrayList = new ArrayList<>();
 
         arrayList.add("Entrantes");
@@ -35,7 +36,6 @@ public class Carta extends AppCompatActivity {
         arrayList.add("Carnes");
         arrayList.add("Postres");
         arrayList.add("Bebidas");
-        //arrayList.add("Pizzas");
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         listView.setAdapter(arrayAdapter);
@@ -45,7 +45,7 @@ public class Carta extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent;
                 // Explicit Intent to launch the ExplicitIntentActivity
-                intent = new Intent(Carta.this, Detalles.class);
+                intent = new Intent(Carta.this, Platos.class);
                 // Include the value of a String called "message" as parameter
                 intent.putExtra("message", position);
                 startActivity(intent);

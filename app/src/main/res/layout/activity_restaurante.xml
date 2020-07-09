@@ -7,104 +7,53 @@
     android:background="@color/colorBackground"
     tools:context=".Restaurante">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="16dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="6dp"
+        android:clickable="false"
+        android:fontFamily="sans-serif-black"
+        android:scrollbarSize="4dp"
+        android:text="@string/selecciona_restaurante"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/lRestaurante"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:fontFamily="sans-serif-black"
-            android:scrollbarSize="4dp"
-            android:text="@string/selecciona_restaurante"
-            android:textColor="@android:color/black"
-            android:textSize="24sp" />
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bLocaliza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp" />
+    <Button
+        android:id="@+id/bLocaliza"
+        android:layout_width="414dp"
+        android:layout_height="79dp"
+        android:layout_weight="1"
+        android:background="@color/colorBoton"
+        android:onClick="launchNewActivity"
+        android:text="@string/boton_localizar"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/colorBotonClarito"
-            android:onClick="launchNewActivity"
-            android:text="@string/boton_rValencia" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/colorBotonClarito"
-            android:onClick="launchNewActivity"
-            android:text="@string/boton_rBarcelona" />
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/colorBotonClarito"
-            android:onClick="launchNewActivity"
-            android:text="@string/boton_rMadrid" />
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/colorBotonClarito"
-            android:onClick="launchNewActivity"
-            android:text="@string/boton_rSevilla" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            android:background="@color/colorBotonClarito"
-            android:onClick="launchNewActivity"
-            android:text="@string/boton_rCastellon" />
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="4dp"
-            android:background="@android:color/black" />
-
-        <Button
-            android:id="@+id/bLocaliza"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorBoton"
-            android:onClick="launchNewActivity"
-            android:text="@string/boton_localizar"
-            android:textColor="@android:color/white" />
-
-    </LinearLayout>
+    <ListView
+        android:id="@+id/lRestaurante"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/bLocaliza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 </androidx.constraintlayout.widget.ConstraintLayout>

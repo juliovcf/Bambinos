@@ -1,7 +1,10 @@
 package com.example.bambino;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -22,17 +25,48 @@ import java.util.List;
 
 public class Platos extends AppCompatActivity {
 
-    private RecyclerView pList;
-    private PlatosApadter platosApadter;
-    private List<Plato> lPlatos;
-    private String coleccion;
+    private ListView lPlatos;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_platos);
 
-        lPlatos = new ArrayList<>();
+        String titulo = "Platos";
+        setTitle(titulo);
+
+        lPlatos = findViewById(R.id.lPlatos);
+        ArrayList<String> arrayList = new ArrayList<>();
+
+        arrayList.add("Entrantes");
+        arrayList.add("Antipasti");
+        arrayList.add("Pasta");
+        arrayList.add("Pizzas");
+        arrayList.add("Carnes");
+        arrayList.add("Postres");
+        arrayList.add("Bebidas");
+
+        ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
+        lPlatos.setAdapter(arrayAdapter);
+
+        lPlatos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent;
+                // Explicit Intent to launch the ExplicitIntentActivity
+                intent = new Intent(Platos.this, Comanda.class);
+                // Include the value of a String called "message" as parameter
+                intent.putExtra("message", position);
+                startActivity(intent);
+            }
+        });
+
+    }
+}
+
+
+        /*lPlatos = new ArrayList<>();
         platosApadter = new PlatosApadter(lPlatos);
 
 
@@ -40,7 +74,7 @@ public class Platos extends AppCompatActivity {
         pList.setHasFixedSize(true);
         pList.setLayoutManager(new LinearLayoutManager(this));
         pList.setAdapter(platosApadter);
-        FirebaseFirestore.getInstance().collection(coleccion).get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        FirebaseFirestore.getInstance().collection("Pizzas").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
@@ -56,11 +90,4 @@ public class Platos extends AppCompatActivity {
                     Log.w("Error", "Error getting documents.", task.getException());
                 }
             }
-        });
-
-
-    }
-}
-
-
-//Log.d("Pizzas", document.getId() + " => " + document.getData());
+        });*/

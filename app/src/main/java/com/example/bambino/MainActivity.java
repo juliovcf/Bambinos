@@ -25,9 +25,6 @@ public class MainActivity extends AppCompatActivity {
             case R.id.bReserva:
                 // Explicit Intent to launch the ExplicitIntentActivity
                 intent = new Intent(MainActivity.this, Restaurante.class);
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto","julk.perezvcf@gmail.com", null));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Android APP - ");
-                startActivity(Intent.createChooser(emailIntent, "Reserva realizada" ));
                 startActivity(intent);
                 break;
             // Pass a parameter within the Intent
