@@ -39,13 +39,13 @@ public class Platos extends AppCompatActivity {
         lPlatos = findViewById(R.id.lPlatos);
         ArrayList<String> arrayList = new ArrayList<>();
 
-        arrayList.add("Entrantes");
-        arrayList.add("Antipasti");
-        arrayList.add("Pasta");
-        arrayList.add("Pizzas");
-        arrayList.add("Carnes");
-        arrayList.add("Postres");
-        arrayList.add("Bebidas");
+        arrayList.add("Spaguettis a la carbonara");
+        arrayList.add("Spaguettis a la boloñesa");
+        arrayList.add("Raviolis di carne");
+        arrayList.add("Raviolis di pera");
+        arrayList.add("Macarrones a la boloñesa");
+        arrayList.add("Macarrones a la carbonara");
+        arrayList.add("Pappardelle a la amatriciana");
 
         ArrayAdapter arrayAdapter = new ArrayAdapter(this,android.R.layout.simple_list_item_1,arrayList);
         lPlatos.setAdapter(arrayAdapter);

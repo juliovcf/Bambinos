@@ -16,5 +16,18 @@
 
     </ListView>
 
+    <Button
+        android:id="@+id/bHecho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginBottom="32dp"
+        android:background="@color/colorBotonClarito"
+        android:text="Hecho" />
+
 
 </RelativeLayout>
